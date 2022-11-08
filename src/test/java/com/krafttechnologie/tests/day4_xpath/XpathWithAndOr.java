@@ -1,12 +1,12 @@
 package com.krafttechnologie.tests.day4_xpath;
 
 import com.krafttechnologie.utilities.WebDriverFactory;
-import org.jsoup.helper.W3CDom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class XpathWithAnd {
+public class XpathWithAndOr {
+
     public static void main(String[] args) {
 
         WebDriver driver= WebDriverFactory.getDriver("chrome");
