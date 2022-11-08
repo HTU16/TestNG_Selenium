@@ -16,7 +16,7 @@ public class XpathWithAndOr {
 //  AND      searchBox.sendKeys("JAVA");
 
         WebElement searchBox= driver.findElement(By.xpath("//input[@type='text' or @class='desktopOldAutosuggestTheme-UyU36RyhCTcuRs_sXL9b']"));
-        searchBox.sendKeys("JAVA");            //OR
+        searchBox.sendKeys("JAVA");             //OR
 
         WebElement searchbtn= driver.findElement(By.xpath("//div[contains(@class,'SearchBoxOld-cH')]"));
         searchbtn.click();
