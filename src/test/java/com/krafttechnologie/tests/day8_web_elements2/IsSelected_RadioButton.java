@@ -32,6 +32,8 @@ public class IsSelected_RadioButton {
         WebElement radio1 = driver.findElement(By.cssSelector("#gridRadios1"));
         WebElement radio2 = driver.findElement(By.cssSelector("#gridRadios2"));
 
+        //isSelected metonu ile elementin secilip secilmedigini assert etmek icin kullaniriz.***********************
+
         System.out.println("radio1 = " + radio1.isSelected());
         System.out.println("radio2 = " + radio2.isSelected());
 
