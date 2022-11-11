@@ -30,7 +30,7 @@ public class IframeTest {
 
         // how to switch the frame ?
 
-        // first way using NAME or ID
+        // first way using NAME or ID-----------------------------------------------------------------------
         driver.switchTo().frame("mce_0_ifr");
 
         WebElement textArea = driver.findElement(By.cssSelector("#tinymce"));
@@ -38,7 +38,7 @@ public class IframeTest {
         Thread.sleep(3000);
         textArea.sendKeys("BİZ KİMSENİN VARLIĞIYLA VAR OLMADIK YOKLUĞUYLA DA YOK OLMAYIZ");
 
-        //second way switching INDEX
+        //second way switching INDEX----------------------------------------------------------------------
         driver.switchTo().parentFrame();// first we should go back to parent
         driver.switchTo().frame(0);
         textArea.clear();
@@ -49,7 +49,7 @@ public class IframeTest {
         driver.switchTo().parentFrame();
         Thread.sleep(3000);
 
-        // third way using WEB ELEMENT
+        // third way using WEB ELEMENT-------------------------------------------------------------------
         WebElement iframe = driver.findElement(By.tagName("iframe"));
         driver.switchTo().frame(iframe);
         textArea.clear();
