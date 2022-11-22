@@ -28,7 +28,11 @@ public class Examples {
     }
     @Test
     public void test() throws InterruptedException {
-
+//        driver.get("https://www.youtube.com/");
+//        System.out.println("driver.getTitle() = " + driver.getTitle());
+//        Thread.sleep(3000);
+//        driver.findElement(By.id("input#search.ytd-searchbox")).sendKeys("çiğdem çiçek");
+//        System.out.println("driver.getTitle() = " + driver.getTitle());
 
     }
 }
