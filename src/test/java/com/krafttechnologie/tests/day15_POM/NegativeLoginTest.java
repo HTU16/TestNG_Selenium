@@ -40,7 +40,7 @@ public class NegativeLoginTest extends TestBase {
     public void wrongUsername () {
 
         driver.get(ConfigurationReader.get("url"));
-        loginPages.userNameInput_loc.sendKeys("lazziya");
+        loginPages.userNameInput_loc.sendKeys("laz ziya");
         loginPages.passwordInput_loc.sendKeys(ConfigurationReader.get("password"));
         loginPages.submitButton_loc.click();
 

@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-public class AnotherLoginTest extends TestBase {
+public class  AnotherLoginTest extends TestBase {
     // Class Task
     // go to url
     // enter username

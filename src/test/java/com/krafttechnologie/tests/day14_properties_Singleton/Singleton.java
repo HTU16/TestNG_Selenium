@@ -39,7 +39,7 @@ public class Singleton {
 
 
         driver1.get("https://www.google.com.tr/?hl=tr");
-        driver2.findElement(By.name("q")).sendKeys("laz ziya");
+        driver2.findElement(By.name("q")).sendKeys("laz  ziya");
 
 
     }

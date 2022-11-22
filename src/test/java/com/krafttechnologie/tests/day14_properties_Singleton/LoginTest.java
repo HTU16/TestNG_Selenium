@@ -41,7 +41,7 @@ public class LoginTest extends TestBase {
                 .sendKeys(ConfigurationReader.get("password")
                         + Keys.ENTER);
 
-        // actions.
+        //  actions.
         // wait.until(ExpectedConditions.visibilityOf(locator))
     }
 }
