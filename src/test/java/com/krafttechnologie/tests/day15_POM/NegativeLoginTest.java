@@ -1,6 +1,6 @@
-package com.krafttechnologie.tests.day15_POM;
-
-import com.krafttechnologie.pages.LoginPages;
+package com.krafttechnologie.tests.day15_POM;                        //pom=page object modal
+                                                 //tekrarlardan kaçınmak daha az komut yazmak amacıyla pom kullanılır.
+import com.krafttechnologie.pages.LoginPages;    //kodu okunabilir hale getirir. nesne deposu. pom komutları yeniden kullanılanilir.
 import com.krafttechnologie.tests.TestBase;
 import com.krafttechnologie.utilities.ConfigurationReader;
 import org.testng.Assert;
@@ -10,13 +10,15 @@ public class NegativeLoginTest extends TestBase {
 
     LoginPages loginPages=new LoginPages();           //global hale getirdik. böylelikle hepsinde teker teker uğraşmamış olduk..
 
-    @Test
-    public void wrongPassword() {
-        driver.get(ConfigurationReader.get("url"));
 
-        loginPages.userNameInput_loc.sendKeys(ConfigurationReader.get("username"));
-        loginPages.passwordInput_loc.sendKeys("somepassword");
-        loginPages.submitButton_loc.click();
+        @Test
+        public void wrongPassword() {
+
+            driver.get(ConfigurationReader.get("url"));
+
+            loginPages.userNameInput_loc.sendKeys(ConfigurationReader.get("username"));
+            loginPages.passwordInput_loc.sendKeys("somepassword");
+            loginPages.submitButton_loc.click();
 
 
 
@@ -34,21 +36,22 @@ public class NegativeLoginTest extends TestBase {
 //                "Email address or password is incorrect. Please check",
 //                "Verify that user is NOT login");
 
-    }
+        }
 
-    @Test
-    public void wrongUsername () {
+        @Test
+        public void wrongUsername() {
 
-        driver.get(ConfigurationReader.get("url"));
-        loginPages.userNameInput_loc.sendKeys("laz ziya");
-        loginPages.passwordInput_loc.sendKeys(ConfigurationReader.get("password"));
-        loginPages.submitButton_loc.click();
+            driver.get(ConfigurationReader.get("url"));
+            loginPages.userNameInput_loc.sendKeys("laz ziya");
+            loginPages.passwordInput_loc.sendKeys(ConfigurationReader.get("password"));
+            loginPages.submitButton_loc.click();
 
-        String actualMessage= loginPages.warningMessage_loc.getText();
-        String expectedMessage="Email address or password is incorrect. Please check";
-        Assert.assertEquals(actualMessage,expectedMessage);
+            String actualMessage= loginPages.warningMessage_loc.getText();
+            String expectedMessage="Email address or password is incorrect. Please check";
+            Assert.assertEquals(actualMessage,expectedMessage);
 
 
 
-    }
+
+        }
 }

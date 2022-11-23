@@ -1,5 +1,6 @@
 package com.krafttechnologie.tests;
 
+import com.krafttechnologie.utilities.ConfigurationReader;
 import com.krafttechnologie.utilities.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -11,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
-
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
@@ -20,9 +20,10 @@ public class TestBase {
     public void setUP() {
 
         driver = Driver.get();
+        driver.get(ConfigurationReader.get("url"));
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         wait=new WebDriverWait(Driver.get(),15);
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         actions=new Actions(driver);
 
     }
@@ -32,4 +33,6 @@ public class TestBase {
         Thread.sleep(2000);
         driver.close();
     }
+
+
 }
