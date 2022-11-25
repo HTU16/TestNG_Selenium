@@ -6,12 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
-
+public class TestBase {              //before after metodlar burada bulunur. tekrar tekrar yazmamış oluyoruz
+                                      //her test basında buralar calışır ona göre ilerler..
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
@@ -28,7 +29,7 @@ public class TestBase {
 
     }
 
-    @AfterMethod
+    @AfterTest      //aftermethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
         driver.close();

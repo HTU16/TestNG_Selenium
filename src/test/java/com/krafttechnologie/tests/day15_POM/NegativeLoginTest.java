@@ -8,17 +8,16 @@ import org.testng.annotations.Test;
 
 public class NegativeLoginTest extends TestBase {
 
-    LoginPages loginPages=new LoginPages();           //global hale getirdik. böylelikle hepsinde teker teker uğraşmamış olduk..
+    LoginPages loginPages=new LoginPages();
 
+    @Test
+    public void wrongPassword() {
 
-        @Test
-        public void wrongPassword() {
+        driver.get(ConfigurationReader.get("url"));
 
-            driver.get(ConfigurationReader.get("url"));
-
-            loginPages.userNameInput_loc.sendKeys(ConfigurationReader.get("username"));
-            loginPages.passwordInput_loc.sendKeys("somepassword");
-            loginPages.submitButton_loc.click();
+        loginPages.userEmailInput_loc.sendKeys(ConfigurationReader.get("userEmail"));
+        loginPages.passwordInput_loc.sendKeys("somepassword");
+        loginPages.submitButton_loc.click();
 
 
 
@@ -36,22 +35,22 @@ public class NegativeLoginTest extends TestBase {
 //                "Email address or password is incorrect. Please check",
 //                "Verify that user is NOT login");
 
-        }
+    }
 
-        @Test
-        public void wrongUsername() {
+    @Test
+    public void wrongUsername() {
 
-            driver.get(ConfigurationReader.get("url"));
-            loginPages.userNameInput_loc.sendKeys("laz ziya");
-            loginPages.passwordInput_loc.sendKeys(ConfigurationReader.get("password"));
-            loginPages.submitButton_loc.click();
+        driver.get(ConfigurationReader.get("url"));
+        loginPages.userEmailInput_loc.sendKeys("xyzw");
+        loginPages.passwordInput_loc.sendKeys(ConfigurationReader.get("password"));
+        loginPages.submitButton_loc.click();
 
-            String actualMessage= loginPages.warningMessage_loc.getText();
-            String expectedMessage="Email address or password is incorrect. Please check";
-            Assert.assertEquals(actualMessage,expectedMessage);
-
-
+        String actualMessage= loginPages.warningMessage_loc.getText();
+        String expectedMessage="Email address or password is incorrect. Please check";
+        Assert.assertEquals(actualMessage,expectedMessage);
 
 
-        }
+
+
+    }
 }
