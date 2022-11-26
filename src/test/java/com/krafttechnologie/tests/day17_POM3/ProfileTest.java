@@ -51,7 +51,7 @@ public class ProfileTest extends TestBase {
         profilePage.skills.sendKeys("TestNG,Cucumber");
 
 
-        //profilePage.save.click();
+      //  profilePage.save.click();
         //BrowserUtils.clickWithJS(profilePage.save);
     }
 
@@ -70,7 +70,7 @@ public class ProfileTest extends TestBase {
         profilePage.companyexperience.sendKeys("GHAN IT");
 
         profilePage.locationExperience.clear();
-        profilePage.locationExperience.sendKeys("ANKARA");
+        profilePage.locationExperience.sendKeys("NEW YORK");
 
         profilePage.startYear.clear();
         profilePage.startYear.sendKeys("02/02/2020");
@@ -81,7 +81,7 @@ public class ProfileTest extends TestBase {
         profilePage.jobDescription.clear();
         profilePage.jobDescription.sendKeys("Cool Workplace");
 
-        profilePage.addExperienceBtn.click();
+       // profilePage.addExperienceBtn.click();
 
 
     }

@@ -8,11 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPages extends BasePage{
 
-    public  LoginPages() {
-
-        PageFactory.initElements(Driver.get(),this);
-
-    }
+//    public  LoginPages() {
+//
+//        PageFactory.initElements(Driver.get(),this);
+//
+//    }
 
     @FindBy(name = "email")
     public WebElement userEmailInput_loc;

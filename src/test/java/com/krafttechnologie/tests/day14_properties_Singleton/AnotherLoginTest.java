@@ -16,7 +16,7 @@ public class  AnotherLoginTest extends TestBase {
     @Test
     public void test1(){
         driver.get(ConfigurationReader.get("url"));
-        driver.findElement(By.name("email")).sendKeys(ConfigurationReader.get("username"));
+        driver.findElement(By.name("email")).sendKeys(ConfigurationReader.get("userEmail"));
         driver.findElement(By.name("password"))
                 .sendKeys(ConfigurationReader.get("password") + Keys.ENTER);}
 }

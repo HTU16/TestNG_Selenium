@@ -4,16 +4,11 @@ import com.krafttechnologie.pages.DashboardPage;
 import com.krafttechnologie.pages.LoginPages;
 import com.krafttechnologie.tests.TestBase;
 import com.krafttechnologie.utilities.ConfigurationReader;
-import com.krafttechnologie.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class LoginTest extends TestBase  {
 
@@ -42,7 +37,7 @@ public class LoginTest extends TestBase  {
         driver.get(ConfigurationReader.get("url"));
 
         driver.findElement(By.name("email"))
-                .sendKeys(ConfigurationReader.get("username"));
+                .sendKeys(ConfigurationReader.get("userEmail"));
         driver.findElement(By.name("password"))
                 .sendKeys(ConfigurationReader.get("password")
                         + Keys.ENTER);
