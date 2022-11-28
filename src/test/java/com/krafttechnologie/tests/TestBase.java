@@ -38,6 +38,8 @@ public class TestBase {              //before after metodlar burada bulunur. tek
         String projectPath=System.getProperty("user.dir");
         String reportPath=projectPath + "/test-output/report.html";      //target altına ismini biz verdik
 
+        //String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        //String reportPath=projectPath + "/test-output/report"+date+".html";
 
         //initialize the html report with the reportPath
         htmlReporter=new ExtentHtmlReporter(reportPath);
@@ -88,7 +90,8 @@ public class TestBase {              //before after metodlar burada bulunur. tek
         }
 
             Thread.sleep(2000);
-        driver.close();
+       // driver.close();
+        Driver.closeDriver();
     }
 
 

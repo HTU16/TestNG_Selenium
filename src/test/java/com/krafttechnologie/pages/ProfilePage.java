@@ -64,13 +64,16 @@ public class ProfilePage extends BasePage {
         @FindBy(xpath = "//button[@value='experience']")
         public WebElement addExperienceBtn;
 
+        @FindBy(xpath = "//input[@id='email']")
+        public WebElement profilEmail_loc;
+
 
         public void profileTabs(String tabName){
-            driver= Driver.get();
-            String tabLocator= "//button[.='"+tabName+"']";
+                driver=Driver.get();
+                String tabLocator= "//button[.='"+tabName+"']";
 
-            BrowserUtils.waitForClickablility(By.xpath(tabLocator),5);
-            WebElement tabElement= driver.findElement(By.xpath(tabLocator));
-            tabElement.click();
+                BrowserUtils.waitForClickablility(By.xpath(tabLocator),5);
+                WebElement tabElement= driver.findElement(By.xpath(tabLocator));
+                tabElement.click();
         }
 }

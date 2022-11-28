@@ -27,8 +27,8 @@ public class ExtentReportDemo {
 
         //create a report path
         String projectPath=System.getProperty("user.dir");
-        String reportPath=projectPath + "/test-output/report.html";      //target altına ismini biz verdik
-
+        String reportPath=projectPath + "/test-output/report.html";      //target altına ismini biz verdik.ismi istediğimiz gibi değiştirebiliriz.
+         //istediğimiz kadar report oluşturabiliriz farklı testler için farklı reportlar..
 
         //initialize the html report with the reportPath
         htmlReporter=new ExtentHtmlReporter(reportPath);
@@ -43,7 +43,7 @@ public class ExtentReportDemo {
         report.setSystemInfo("Environment","Production");  //pro: hangi sayfayı test ettiğimizi yazarız..
         report.setSystemInfo("Browser", ConfigurationReader.get("browser"));
         report.setSystemInfo("OS", System.getProperty("os.name"));  //hangi sistemde calışacagını gösterecek.örn:windows8
-        report.setSystemInfo("Test Engineer", "HTU");
+        report.setSystemInfo("Test Engineer", "HTU");  // unvan ve adımızı burada yazarız.
     }
 
     @Test

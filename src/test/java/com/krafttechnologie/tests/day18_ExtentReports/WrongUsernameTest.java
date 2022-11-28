@@ -57,8 +57,8 @@ public class WrongUsernameTest extends TestBase {
         String actualMessage=loginPages.warningMessage_loc.getText();
 
         extentLogger.info("Verify that NOT log in");
-       // Assert.assertEquals(actualMessage,"Email address or password is incorrect. Please check");
-        Assert.assertEquals(actualMessage,"AAAAJSDHASEmail address or password is incorrect. Please ");
+        Assert.assertEquals(actualMessage,"Email address or password is incorrect. Please check");
+      //  Assert.assertEquals(actualMessage,"AAAAJSDHASEmail address or password is incorrect. Please check");
 
         extentLogger.pass("PASSED");
 

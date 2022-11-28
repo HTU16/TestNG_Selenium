@@ -1,0 +1,94 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!-- How to run specific class / sadece seçili classı çalıştırır-->
+<!--
+ <suite name="Krafttech Automation" verbose="1">
+    <test name="Krafttech Smoke Test">
+        <classes>
+           <class name="com.krafttechnologie.tests.day13_WebTables.WebTables"></class>
+        </classes>
+    </test>
+</suite>
+-->
+
+
+<!-- How to run each package / package ı çalıştırır -->
+<!--
+<suite name="Krafttech Automation" verbose="1">
+<test name="Krafttech Smoke Test">
+   <packages>
+       <package name="com.krafttechnologie.tests.day15_POM"></package>
+   </packages>
+</test>
+</suite>
+-->
+
+
+<!-- How to run all package / bütün packageleri çalıştırır -->
+<!--
+<suite name="Krafttech Automation" verbose="1">
+<test name="Krafttech Smoke Test">
+    <packages>
+        <package name="com.krafttechnologie.tests.*"></package>
+    </packages>
+</test>
+</suite>
+-->
+
+
+<!-- How to run specific class / seçtiğin kadar classı çalıştırır -->
+<!--
+<suite name="Krafttech Automation" verbose="1">
+<test name="Krafttech Smoke Test">
+    <classes>
+        <class name="com.krafttechnologie.tests.day18_ExtentReports.ExtentReportDemo"></class>
+        <class name="com.krafttechnologie.tests.day15_POM.NegativeLoginTest"></class>
+    </classes>
+</test>
+</suite>
+-->
+
+
+<!-- How to run specific package / seçtiğin kadar package çalıştırır -->
+<!--
+<suite name="Krafttech Automation" verbose="1">
+<test name="Krafttech Smoke Test">
+   <packages>
+       <package name="com.krafttechnologie.tests.day14_Properties_Singleton"></package>
+       <package name="com.krafttechnologie.tests.day11_Waits"></package>
+   </packages>
+</test>
+</suite>
+-->
+
+
+<!-- How to run specific test in the class / class içindeki testi çalıştırır -->
+<!--
+<suite name="Krafttech Automation" verbose="1">
+<test name="Krafttech Smoke Test">
+   <classes>
+       <class name="com.krafttechnologie.tests.day12_Actions_FileUpload_JSExecutor.Actions1">
+           <methods>
+               <include name="dragAndDropp"></include>
+               <include name="hover1"></include>
+           </methods>
+       </class>
+   </classes>
+</test>
+</suite>
+-->
+
+
+
+<!-- How to run all tests cases in one class without one/ classtaki seçili test hariç gerisini çalıştırır -->
+<suite name="Krafttech Automation" verbose="1">
+    <test name="Krafttech Smoke Test">
+        <classes>
+            <class name="com.krafttechnologie.tests.day18_ExtentReports.PositiveTest">
+                <methods>
+                    <exclude name="loginTest1"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
