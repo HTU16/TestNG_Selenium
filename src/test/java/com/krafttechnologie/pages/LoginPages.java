@@ -37,5 +37,11 @@ public class LoginPages extends BasePage{
         submitButton_loc.click();
     }
 
+    public void loginWithParameters(String username, String password){
+
+        userEmailInput_loc.sendKeys(username);
+        passwordInput_loc.sendKeys(password);
+        submitButton_loc.click();
+    }
 
 }

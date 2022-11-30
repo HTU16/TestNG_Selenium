@@ -22,7 +22,7 @@ public class VerifyUserInfo extends TestBase {
      */
 
     @Test
-    public void userInfo() {
+    public void userInfo () {
         LoginPages loginPages=new LoginPages();
         DashboardPage dashboardPage=new DashboardPage();
         ProfilePage profilePage=new ProfilePage();
