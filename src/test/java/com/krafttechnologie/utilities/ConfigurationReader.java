@@ -3,7 +3,7 @@ package com.krafttechnologie.utilities;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class ConfigurationReader {
+public class ConfigurationReader {              //dataları okumaya yarar.
 
     private static Properties properties;
 
@@ -26,7 +26,7 @@ public class ConfigurationReader {
         }
     }
 
-    public static String get(String keyName){
+    public static String get(String keyName){                  //key value bizlere getirir.
         return properties.getProperty(keyName);
     }
 

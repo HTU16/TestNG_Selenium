@@ -1,4 +1,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--
+SMOKE TEST NEDEN YAPILIR: GÜNLÜK YAPILAN TESTLERDİR.HATA VAR MI YOK MU CALIŞIYOR MU AMACIYLA YAPILIR.
+yapılacak testlerin planlanma asaması burada yapılır
+günlük sabahtan yapılacak ilk işdir
+
+        -->
 
 <!-- How to run specific class / sadece seçili classı çalıştırır-->
 <!--

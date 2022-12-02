@@ -11,11 +11,11 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class Driver {
+public class Driver {                  //browser üzerinde işlem yapmamızı sağlar.
 
     private Driver() {}
 
-    private static WebDriver driver;
+    private static WebDriver driver;           //her yerden cagırmak için static yaptık.
 
     public static WebDriver get() {
         if (driver == null) {
@@ -63,7 +63,7 @@ public class Driver {
         return driver;
     }
 
-    public static void closeDriver() {
+    public static void closeDriver() {                 //işlem bittikten sonra kapatmayı sağladık.
         if (driver != null) {
             driver.quit();
             driver = null;
